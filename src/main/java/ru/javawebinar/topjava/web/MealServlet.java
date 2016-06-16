@@ -24,8 +24,6 @@ import static org.slf4j.LoggerFactory.getLogger;
  */
 public class MealServlet extends HttpServlet {
     private static final Logger LOG = getLogger(MealServlet.class);
-
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<UserMeal> mealList = Arrays.asList(
                 new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", 500),
@@ -38,7 +36,6 @@ public class MealServlet extends HttpServlet {
         List<UserMealWithExceed> filteredMealsWithExceeded = UserMealsUtil.getFilteredWithExceeded(mealList, LocalTime.of(7, 0), LocalTime.of(23, 0), 2000);
         LOG.debug("redirect to mealList");
         request.setAttribute("mealList", filteredMealsWithExceeded);
-
 
         request.getRequestDispatcher("/mealList.jsp").forward(request, response);
     }
