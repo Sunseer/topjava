@@ -8,6 +8,7 @@ import ru.javawebinar.topjava.util.exception.ExceptionUtil;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * GKislin
@@ -36,7 +37,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<User> getAll() {
-        return repository.getAll();
+        return repository.getAll().stream().collect(Collectors.toList());
     }
 
     public void update(User user) {
