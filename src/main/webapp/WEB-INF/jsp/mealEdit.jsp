@@ -2,17 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
-
 <html>
-<jsp:include page="fragments/headTag.jsp"/>
-
+<head>
+    <title>Meal</title>
+    <jsp:include page="fragments/headTag.jsp"/>
+</head>
 <body>
 <jsp:include page="fragments/bodyHeader.jsp"/>
 <section>
-
-    <h3><fmt:message key="mealed.title"/></h3>
-
-    <h3>${param.action == 'create' ? 'Create meal' : 'Edit meal'}</h3>
     <hr>
     <jsp:useBean id="meal" type="ru.javawebinar.topjava.model.UserMeal" scope="request"/>
     <form method="post" action="meals">

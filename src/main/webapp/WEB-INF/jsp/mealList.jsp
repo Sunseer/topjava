@@ -5,7 +5,7 @@
 <html>
 <head>
     <title><fmt:message key="meals.title"/></title>
-    <link rel="stylesheet" href="css/style.css">
+    <jsp:include page="fragments/headTag.jsp"/>
 </head>
 <body>
 <jsp:include page="fragments/bodyHeader.jsp"/>
@@ -60,5 +60,6 @@
         </c:forEach>
     </table>
 </section>
+<jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>
