@@ -1,3 +1,7 @@
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <a href="meals" class="navbar-brand"><fmt:message key="app.title"/></a>
@@ -10,8 +14,3 @@
         </div>
     </div>
 </div>
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
-<header><a href="/" onclick="history.back()"><fmt:message key="app.title"/></a></header>
